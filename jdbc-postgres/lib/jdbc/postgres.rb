@@ -3,7 +3,7 @@ warn "Jdbc-Postgres is only for use with JRuby" if (JRUBY_VERSION.nil? rescue tr
 module Jdbc
   module Postgres
     DRIVER_VERSION = '9.2.1002'
-    VERSION = DRIVER_VERSION + '.oe1'
+    VERSION = DRIVER_VERSION + '.oe2'
 
     def self.driver_jar
       version_jdbc_version = DRIVER_VERSION.split( '.' )
