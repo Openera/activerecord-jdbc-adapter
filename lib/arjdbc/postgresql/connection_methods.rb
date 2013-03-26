@@ -9,7 +9,7 @@ class ActiveRecord::Base
 
       # Check if prepared_statements is false and set the JDBC driver prepared statement threshold property
       if config.has_key?(:prepared_statements) && (config[:prepared_statements] == 'false' || config[:prepared_statements] == false || config[:prepared_statements].blank?)
-        (config[:pg_params]||="") << (config[:pg_params].present? ? '&' : '?')
+        (config[:pg_params]||="") << (config[:pg_params].present? ? '&' : '?dog=breakfast&')
         config[:pg_params] << 'prepareThreshold=0' unless config[:pg_params].include?('prepareThreshold')
       end
 
